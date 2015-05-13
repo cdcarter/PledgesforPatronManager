@@ -12,6 +12,7 @@ What this project consists of:
 * An Opportunity RecordType for `Pledges`
   * custom fields to track amount due on the pledge, number of payments, etc...
 * An Opportunity RecordType for `PledgePayments`
+  * Check Date represents payment date.
 * Rollups between `Pledges` and `PledgePayments`
 * Useful reporting structure
 

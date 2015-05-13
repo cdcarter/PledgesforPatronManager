@@ -18,4 +18,8 @@ What this project consists of:
 
 
 TODO:
-* New Pledge button/Flow? Needs to collect info, and set default stage.
+* Should probably use a FieldSet for what data is transfered between Pledge and PledgePayment
+* Rollups on the Pledge (trigger? PB/Flow?)
+* Reports
+* Docs
+* Error Handling

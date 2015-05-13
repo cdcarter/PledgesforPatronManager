@@ -1413,6 +1413,18 @@
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
+        <fullName>Pledge_Payment_Alert__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(OR(ISNULL( Amount ),(Amount == 0)),
+IMAGE(&quot;/img/samples/flag_yellow.gif&quot; , &apos;Yellow&apos; ,12,12) &amp; &apos; This is a pledge payment record! Have you set the amount and payment type?&apos; &amp; BR(),
+NULL)</formula>
+        <label>Pledge Payment Alert</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Pledge__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>

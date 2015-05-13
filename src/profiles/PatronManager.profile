@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>PledgesExtension</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>UTIL_SharedCode</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
     <custom>true</custom>
     <fieldPermissions>
         <editable>true</editable>
@@ -366,6 +374,14 @@
         <field>Opportunity.Type</field>
         <readable>true</readable>
     </fieldPermissions>
+    <layoutAssignments>
+        <layout>Opportunity-Pledge Layout</layout>
+        <recordType>Opportunity.Pledge</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Opportunity-Pledge Payment Layout</layout>
+        <recordType>Opportunity.PatronDonate__PledgePayment</recordType>
+    </layoutAssignments>
     <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
@@ -375,6 +391,10 @@
         <object>Opportunity</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
+    <pageAccesses>
+        <apexPage>NewPledgePayment</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Opportunity.PatronDonate__CorporateDonation</recordType>

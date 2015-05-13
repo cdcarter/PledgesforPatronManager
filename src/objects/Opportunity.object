@@ -185,6 +185,70 @@
             <default>false</default>
         </values>
     </businessProcesses>
+    <businessProcesses>
+        <fullName>Pledge</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Ask - Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ask - Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ask - Under Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Won</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cultivation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engaged with Organization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Identification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Negotiation%2FReview</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pledged</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Preparation of Ask</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospecting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualified Interest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solicitation</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>true</enableFeeds>
     <enableHistory>false</enableHistory>
@@ -365,6 +429,44 @@
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
+        <fullName>Amount_Due__c</fullName>
+        <externalId>false</externalId>
+        <formula>Amount - (Amount_Paid__c + Amount_Written_Off__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The amount to be collected on the pledge.</inlineHelpText>
+        <label>Amount Due</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Amount_Paid__c</fullName>
+        <description>This field is read-only, as it is calculated by child pledges.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The amount paid on the pledge so far.</inlineHelpText>
+        <label>Amount Paid</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Amount_Written_Off__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>How much of this pledge is being written off as uncollectible?</inlineHelpText>
+        <label>Amount Written Off</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
         <fullName>CampaignId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
@@ -389,6 +491,16 @@
     <fields>
         <fullName>ExpectedRevenue</fullName>
         <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Expected_Payment__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The date that it is expected the pledge will be paid off.</inlineHelpText>
+        <label>Expected Payment</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
     </fields>
     <fields>
         <fullName>IsPrivate</fullName>
@@ -457,6 +569,21 @@
         <fullName>NextStep</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Number_of_Payments__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>This field is read-only, as it is auto-calculated by the lookup rollup.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The number of payments made on this pledge</inlineHelpText>
+        <label>Number of Payments</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>OwnerId</fullName>
@@ -1269,6 +1396,46 @@
         <referenceTo>PatronTicket__TicketOrder__c</referenceTo>
         <relationshipLabel>Refund Donations</relationshipLabel>
         <relationshipName>RefundDonations</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Patron_Comment__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Any comments or notes that came from the patron regarding this donation.</inlineHelpText>
+        <label>Patron Comment</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Pledge__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>The pledge this is a payment on.</inlineHelpText>
+        <label>Pledge</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>$Source.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Pledge</value>
+            </filterItems>
+            <filterItems>
+                <field>$Source.AccountId</field>
+                <operation>equals</operation>
+                <valueField>$Source.AccountId</valueField>
+            </filterItems>
+            <infoMessage>Only pledges from this account are currently showing.</infoMessage>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Opportunities (Pledge)</relationshipLabel>
+        <relationshipName>PledgePayments</relationshipName>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
@@ -3289,7 +3456,7 @@
     <recordTypes>
         <fullName>Pledge</fullName>
         <active>true</active>
-        <businessProcess>PatronDonate__Major Gift</businessProcess>
+        <businessProcess>Pledge</businessProcess>
         <description>A pledge is a gift that an organization accrues as if it were given, before cash is in hand.</description>
         <label>Pledge</label>
         <picklistValues>
@@ -3443,7 +3610,7 @@
             <picklist>PatronDonate__Status__c</picklist>
             <values>
                 <fullName>New</fullName>
-                <default>true</default>
+                <default>false</default>
             </values>
             <values>
                 <fullName>Payment Complete</fullName>

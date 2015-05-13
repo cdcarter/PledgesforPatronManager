@@ -14,3 +14,7 @@ What this project consists of:
 * An Opportunity RecordType for `PledgePayments`
 * Rollups between `Pledges` and `PledgePayments`
 * Useful reporting structure
+
+
+TODO:
+* New Pledge button/Flow? Needs to collect info, and set default stage.

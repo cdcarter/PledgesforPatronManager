@@ -3082,11 +3082,11 @@
             </values>
             <values>
                 <fullName>New</fullName>
-                <default>true</default>
+                <default>false</default>
             </values>
             <values>
                 <fullName>Payment Complete</fullName>
-                <default>false</default>
+                <default>true</default>
             </values>
             <values>
                 <fullName>Payment Exception</fullName>
@@ -3101,14 +3101,18 @@
             </values>
             <values>
                 <fullName>General</fullName>
-                <default>false</default>
+                <default>true</default>
             </values>
             <values>
-                <fullName>Pledge</fullName>
+                <fullName>Recurring</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>Restricted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -3278,6 +3282,206 @@
             </values>
             <values>
                 <fullName>Payment Exception</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Pledge</fullName>
+        <active>true</active>
+        <businessProcess>PatronDonate__Major Gift</businessProcess>
+        <description>A pledge is a gift that an organization accrues as if it were given, before cash is in hand.</description>
+        <label>Pledge</label>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PatronDonate__Card_Type__c</picklist>
+            <values>
+                <fullName>Amex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discover</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MasterCard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visa</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PatronDonate__Dedication_Acknowledgement_Type__c</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PatronDonate__Dedication_Type__c</picklist>
+            <values>
+                <fullName>in honor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>in memory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>on behalf</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PatronDonate__Frequency__c</picklist>
+            <values>
+                <fullName>Recurring</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PatronDonate__Fund__c</picklist>
+            <values>
+                <fullName>Annual Fund</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Building Fund</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capital</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PatronDonate__Matching_Status__c</picklist>
+            <values>
+                <fullName>Not Posted</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Posted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PatronDonate__Payment_Type__c</picklist>
+            <values>
+                <fullName>Cash</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Check</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Kind</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Stock</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PatronDonate__Status__c</picklist>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Payment Complete</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Board</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Matching</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pledge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recurring</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Restricted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unrestricted</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

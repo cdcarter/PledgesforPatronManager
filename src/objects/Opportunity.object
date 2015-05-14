@@ -3789,6 +3789,16 @@ NULL)</formula>
         <url>/006/e?CF00N1a0000017O3h={!Opportunity.Name}&amp;CF00N1a0000017O3h_lkid={!Opportunity.Id}&amp;retURL={!Opportunity.Id}&amp;RecordType=0121a000000I6el&amp;ent=Opportunity</url>
     </webLinks>
     <webLinks>
+        <fullName>New_Payment</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>New Payment</masterLabel>
+        <openType>replace</openType>
+        <page>NewPledgePayment</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
         <fullName>PatronDonate__AccountDonationTemplate</fullName>
         <availability>online</availability>
         <description>A template for a custom button that will create a new Donation from the Account&apos;s &quot;Donations&quot; related list. You should not use this button directly, but create a new button with the same properties. To fill the Donor field for individual acounts you must make two changes to the URL. 

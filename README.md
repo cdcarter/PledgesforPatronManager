@@ -18,8 +18,6 @@ What this project consists of:
 
 
 TODO:
-* Should probably use a FieldSet for what data is transfered between Pledge and PledgePayment
-* Rollups on the Pledge (trigger? PB/Flow?)
 * Reports
 * Docs
 * Error Handling

@@ -16,11 +16,17 @@ public with sharing class PledgesExtension {
     }
 
     public PageReference NewPledgePayment() {
-        Opportunity newPayment = UTIL_SharedCode.newPaymentFromPledge(this.opp);
-        insert newPayment;
+        Opportunity newPayment;
+        try {
+            newPayment = UTIL_SharedCode.newPaymentFromPledge(this.opp);
+            insert newPayment;
+        } catch (Exception e) {
+            ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR, 'Payment Creation Failed'));
+            newPayment = this.opp;
+        }
+        
 
         PageReference opptyPage = new ApexPages.StandardController(newPayment).view();
-        opptyPage.setRedirect(true);
         return opptyPage;
     }
 

@@ -31,7 +31,9 @@ trigger PledgeRollupTrigger on Opportunity (after insert, after update, after de
 			}
 		}
 		if (pledgeId!=null) {
-			Opportunity pledge = new Opportunity(Id=pledgeId,Amount_Paid__c=paid,Number_of_Payments__c=payments);
+			Opportunity pledge = new Opportunity(Id=pledgeId,
+											Amount_Paid__c=paid,
+											Number_of_Payments__c=payments);
 			oppsToUpdate.add(pledge);
 		}
 	}

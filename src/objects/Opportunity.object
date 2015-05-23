@@ -69,7 +69,7 @@
     <fields>
         <fullName>Amount_Due__c</fullName>
         <externalId>false</externalId>
-        <formula>Amount - (Amount_Paid__c + Amount_Written_Off__c)</formula>
+        <formula>Pledged_Amount__c - (Amount_Paid__c + Amount_Written_Off__c)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <inlineHelpText>The amount to be collected on the pledge.</inlineHelpText>
         <label>Amount Due</label>
@@ -113,6 +113,18 @@
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lookup_Pledge_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>Pledge__r.Amount</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pledge Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
     </fields>
     <fields>
         <fullName>Number_of_Payments__c</fullName>

@@ -6,8 +6,9 @@ trigger PledgeRollupTrigger on Opportunity (after insert, after update, after de
 		pledgeIds.add(opp.Pledge__c);
 	}
 
-	List<Opportunity> allPayments = [Select Id,Name,Amount,PatronDonate__Check_Date__c,Pledge__c
-									 From Opportunity WHERE Pledge__c IN :pledgeIds];
+	List<Opportunity> allPayments = [Select Id,Name,Amount,PatronDonate__Check_Date__c,
+								    Pledge__c, IsWon, IsClosed
+									From Opportunity WHERE Pledge__c IN :pledgeIds];
 
 	Map<Id,Opportunity[]> pledgeMap = new Map<Id,Opportunity[]>();
 
@@ -25,7 +26,7 @@ trigger PledgeRollupTrigger on Opportunity (after insert, after update, after de
 		Integer payments = 0;
 
 		for (Opportunity payment : ppayments) {
-			if(payment.Amount != null) {
+			if((payment.Amount != null) && (payment.IsClosed) && (payment.IsWon)) {
 				paid = (paid + payment.Amount);
 				payments = (payments + 1);
 			}

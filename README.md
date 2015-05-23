@@ -18,9 +18,13 @@ What this project consists of:
 
 What you should do to use it:
 * Assure that your PledgePayment recordtype is NOT included in any rollups. Check in Organizational Settings as well as actual rollup definitions on Account.
+  * This involves contacting PatMan and tweaking `PatronDonate__First_Donation_Date__c`, `PatronDonate__Last_Donation_Date__c`, `PatronDonate__Lifetime_Donation_History_Amount__c`, `PatronDonate__Lifetime_Donation_History_Number__c`, and `PatronDonate__This_Year_Donation_History_Amount__c`.
+  * Let the author note that those rollups are quite freaking annoying anyway, and should probably not be used without first adjusting them with PatronManager CLient Support to meet your Organizations reporting requirements. 
 * Know that Pledge donations SHOULD be rolled up in all cases. Pledges will be considered closed/won, because we want to accrue them.
 
 TODO:
 * Reports
+  * All open pledges with status as of a given date.
+  * Donations including pledged amts but not payments as of a given date.
 * Docs
-* Decide what forecast closed/won stage to put pledges in, so that MajorGift business process is still useful.
+* Decide what forecast closed/won stage to put pledges in, so that MajorGift business process is still useful. -- NEVER MIND -- a closed/won stage has to be Closed. This is ok.

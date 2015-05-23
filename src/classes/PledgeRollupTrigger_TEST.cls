@@ -68,6 +68,23 @@ private class PledgeRollupTrigger_TEST {
 		System.assertEquals(1,pledge.Number_of_Payments__c);
 	}
 
+	@isTest static void test_dont_rollup_open() {
+		Opportunity pledge = new Opportunity(RecordTypeId=UTIL_SharedCode.PledgeRecordTypeId(),
+											Name='The Test Pledge',StageName='Pledged',
+											CloseDate=Date.today(),Amount=500);
+		insert pledge;
+
+		Opportunity payment1 = new Opportunity(RecordTypeId=UTIL_SharedCode.PledgePaymentRecordTypeId(),
+												Name ='A payment',StageName='Not Posted',
+												CloseDate=Date.today(),Amount = 20, Pledge__c = pledge.Id);
+		insert payment1;
+
+		pledge = [Select Id,Amount_Due__c,Number_of_payments__c FROM Opportunity
+								Where Id =: pledge.Id];
+		System.assertEquals(500,pledge.Amount_Due__c);
+		System.assertEquals(0,pledge.Number_of_Payments__c);
+	}
+
 	@isTest static void test_bulky() {
 		Opportunity pledge = new Opportunity(RecordTypeId=UTIL_SharedCode.PledgeRecordTypeId(),
 											Name='The Test Pledge',StageName='Pledged',

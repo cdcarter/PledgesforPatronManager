@@ -1439,6 +1439,16 @@ NULL)</formula>
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Pledge_Record_Type_Override__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is used to override the behavior of turning donations with a Pledge__c into PledgePayment RT.</description>
+        <externalId>false</externalId>
+        <label>Pledge Record Type Override</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Pledge__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>

@@ -42,6 +42,10 @@
                 <behavior>Edit</behavior>
                 <field>Pledge__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Pledge_Record_Type_Override__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

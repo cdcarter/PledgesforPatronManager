@@ -189,18 +189,6 @@
         <fullName>Pledge</fullName>
         <isActive>true</isActive>
         <values>
-            <fullName>Ask - Accepted</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Ask - Denied</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Ask - Under Review</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Closed Lost</fullName>
             <default>false</default>
         </values>
@@ -209,43 +197,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Cultivation</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Engaged with Organization</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Identification</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Negotiation%2FReview</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Pledged</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Preparation of Ask</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Prospecting</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Qualification</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Qualified Interest</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Solicitation</fullName>
             <default>false</default>
         </values>
     </businessProcesses>

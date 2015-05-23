@@ -379,6 +379,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Opportunity.Pledge_Record_Type_Override__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Opportunity.Pledge__c</field>
         <readable>false</readable>
     </fieldPermissions>

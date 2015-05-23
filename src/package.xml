@@ -20,6 +20,10 @@
         <name>CustomObject</name>
     </types>
     <types>
+        <members>*</members>
+        <name>Flow</name>
+    </types>
+    <types>
         <members>Opportunity-Pledge Layout</members>
         <members>Opportunity-Pledge Payment Layout</members>
         <name>Layout</name>
@@ -34,5 +38,5 @@
         <members>Pledges/YTD_Donations_with_Pledges</members>
         <name>Report</name>
     </types>
-    <version>33.0</version>
+    <version>31.0</version>
 </Package>

@@ -1,4 +1,4 @@
-public with sharing class UTIL_SharedCode {
+global with sharing class UTIL_SharedCode {
     public static Id PledgePaymentRecordTypeId() {
         return [SELECT Id FROM RecordType WHERE SObjectType = 'Opportunity' 
         		AND DeveloperName = 'PledgePayment' LIMIT 1].Id;
@@ -24,5 +24,26 @@ public with sharing class UTIL_SharedCode {
         opp.Pledge__c = pledge.Id;
 
         return opp;
+    }
+
+    @InvocableMethod(label='Set RecordType' description='Set an objects record type')
+    global static List<Opportunity> SetOpportunityRecordType(List<SetRecordTypeRequest> reqs) {
+        List<Opportunity> results = new List<Opportunity>();
+        for (SetRecordTypeRequest req: reqs) {
+            Id rt = [Select Id from RecordType WHERE SObjectType =: 'Opportunity'
+                 AND DeveloperName =: req.recordTypeName LIMIT 1].Id;
+            results.add(new Opportunity(Id=req.oppty, RecordTypeId = rt));
+        }
+
+        update results;
+        return results;
+    }
+
+    global class SetRecordTypeRequest {
+        @InvocableVariable(required=true)
+        public String recordTypeName;
+
+        @InvocableVariable(required=true)
+        public Id oppty;
     }
 }

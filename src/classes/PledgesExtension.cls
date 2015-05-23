@@ -1,6 +1,6 @@
 public with sharing class PledgesExtension {
 
-	private final Opportunity opp;
+    private final Opportunity opp;
 
     // The extension constructor initializes the private member
     // variable mysObject by using the getRecord method from the standard

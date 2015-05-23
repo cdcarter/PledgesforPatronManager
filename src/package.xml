@@ -8,7 +8,7 @@
 		<name>ApexClass</name>
 	</types>
 	<types>
-		<members>NewPledgePayment</members>
+		<members>NewPledgePaymentDetail</members>
 		<name>ApexPage</name>
 	</types>
 	<types>

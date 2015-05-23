@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <classAccesses>
+        <apexClass>PledgeRollupTrigger_TEST</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>PledgesExtension</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>UTIL_SharedCode</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>UTIL_SharedCode_TEST</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <custom>false</custom>
@@ -361,6 +369,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Opportunity.Pledge_Amount__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Opportunity.Pledge_Payment_Alert__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -397,7 +410,7 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <pageAccesses>
-        <apexPage>NewPledgePayment</apexPage>
+        <apexPage>NewPledgePaymentDetail</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <recordTypeVisibilities>

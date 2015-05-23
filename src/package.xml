@@ -1,29 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-	<types>
-		<members>PledgeRollupTrigger_TEST</members>
-		<members>PledgesExtension</members>
-		<members>UTIL_SharedCode</members>
-		<members>UTIL_SharedCode_TEST</members>
-		<name>ApexClass</name>
-	</types>
-	<types>
-		<members>NewPledgePaymentDetail</members>
-		<name>ApexPage</name>
-	</types>
-	<types>
-		<members>Opportunity</members>
-		<members>OpportunityContactRole</members>
-		<name>CustomObject</name>
-	</types>
-	<types>
-		<members>Opportunity-Pledge Layout</members>
-		<members>Opportunity-Pledge Payment Layout</members>
-		<name>Layout</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>Profile</name>
-	</types>
-	<version>31.0</version>
+    <types>
+        <members>PledgeRollupTrigger_TEST</members>
+        <members>PledgesExtension</members>
+        <members>UTIL_SharedCode</members>
+        <members>UTIL_SharedCode_TEST</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>NewPledgePaymentDetail</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>Opportunity</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Opportunity-Pledge Layout</members>
+        <members>Opportunity-Pledge Payment Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>Pledges</members>
+        <members>Pledges/Open_Pledge_Report</members>
+        <members>Pledges/YTD_Donations_with_Pledges</members>
+        <name>Report</name>
+    </types>
+    <version>31.0</version>
 </Package>

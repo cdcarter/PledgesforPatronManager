@@ -28,3 +28,4 @@ TODO:
   * Donations including pledged amts but not payments as of a given date.
 * Docs
 * Decide what forecast closed/won stage to put pledges in, so that MajorGift business process is still useful. -- NEVER MIND -- a closed/won stage has to be Closed. This is ok.
+* When an oppty of any record type becomes stage Pledged, it should turn into a Pledge record, unless override is checked.

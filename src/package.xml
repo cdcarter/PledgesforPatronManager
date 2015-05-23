@@ -16,8 +16,26 @@
         <name>ApexTrigger</name>
     </types>
     <types>
-        <members>Opportunity</members>
-        <name>CustomObject</name>
+        <members>Opportunity.Pledge</members>
+        <name>BusinessProcess</name>
+    </types>
+    <types>
+        <members>Opportunity.Amount_Due__c</members>
+        <members>Opportunity.Amount_Paid__c</members>
+        <members>Opportunity.Amount_Written_Off__c</members>
+        <members>Opportunity.Expected_Payment__c</members>
+        <members>Opportunity.Number_of_Payments__c</members>
+        <members>Opportunity.Patron_Comment__c</members>
+        <members>Opportunity.Pledge_Amount__c</members>
+        <members>Opportunity.Pledge_Payment_Alert__c</members>
+        <members>Opportunity.Pledge_Record_Type_Override__c</members>
+        <members>Opportunity.Pledge__c</members>
+        <members>Opportunity.StageName</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Opportunity.Pledge_Payment_FS</members>
+        <name>FieldSet</name>
     </types>
     <types>
         <members>*</members>
@@ -33,10 +51,19 @@
         <name>Profile</name>
     </types>
     <types>
+        <members>Opportunity.PatronDonate__PledgePayment</members>
+        <members>Opportunity.Pledge</members>
+        <name>RecordType</name>
+    </types>
+    <types>
         <members>Pledges</members>
         <members>Pledges/Open_Pledge_Report</members>
         <members>Pledges/YTD_Donations_with_Pledges</members>
         <name>Report</name>
+    </types>
+    <types>
+        <members>Opportunity.New_PaymentDetail</members>
+        <name>WebLink</name>
     </types>
     <version>31.0</version>
 </Package>

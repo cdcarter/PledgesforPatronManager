@@ -1483,12 +1483,12 @@ NULL)</formula>
         <lookupFilter>
             <active>true</active>
             <filterItems>
-                <field>$Source.RecordTypeId</field>
+                <field>Opportunity.RecordTypeId</field>
                 <operation>equals</operation>
                 <value>Pledge</value>
             </filterItems>
             <filterItems>
-                <field>$Source.AccountId</field>
+                <field>Opportunity.AccountId</field>
                 <operation>equals</operation>
                 <valueField>$Source.AccountId</valueField>
             </filterItems>
@@ -1496,7 +1496,7 @@ NULL)</formula>
             <isOptional>true</isOptional>
         </lookupFilter>
         <referenceTo>Opportunity</referenceTo>
-        <relationshipLabel>Opportunities (Pledge)</relationshipLabel>
+        <relationshipLabel>Pledge Payments</relationshipLabel>
         <relationshipName>PledgePayments</relationshipName>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>

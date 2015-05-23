@@ -13,7 +13,8 @@ What this project consists of:
   * custom fields to track amount due on the pledge, number of payments, etc...
 * An Opportunity RecordType for `PledgePayments`
 * Rollups between `Pledges` and `PledgePayments`
-* Two useful reports
+* A button to create pledgepayments off of pledges.
+* Two useful reports that show as of any given date, the status of all open pledges, as well as the book value of your contributions. 
 
 What you should do to use it:
 * Assure that your PledgePayment recordtype is NOT included in any rollups. Check in Organizational Settings as well as actual rollup definitions on Account.

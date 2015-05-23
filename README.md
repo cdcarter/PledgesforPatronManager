@@ -26,6 +26,5 @@ What you should do to use it:
 TODO:
 * Docs
 * Batch process (and maybe scheduled job) to rollup any pledges
-* Bulkize the Invocable Method
 * test the Invocable method
 * Better writeoff handling -- maybe a closed/lost oppty and a writeoff action?

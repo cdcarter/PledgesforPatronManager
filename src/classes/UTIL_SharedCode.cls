@@ -29,9 +29,15 @@ global with sharing class UTIL_SharedCode {
     @InvocableMethod(label='Set RecordType' description='Set an objects record type')
     global static List<Opportunity> SetOpportunityRecordType(List<SetRecordTypeRequest> reqs) {
         List<Opportunity> results = new List<Opportunity>();
+        List<RecordType> rts = [Select Id, DeveloperName from RecordType
+                                WHERE SObjectType =: 'Opportunity'];
         for (SetRecordTypeRequest req: reqs) {
-            Id rt = [Select Id from RecordType WHERE SObjectType =: 'Opportunity'
-                 AND DeveloperName =: req.recordTypeName LIMIT 1].Id;
+            Id rt;
+            for (RecordType rrt : rts) {
+                if (rrt.DeveloperName == req.recordTypeName) {
+                    rt = rrt.Id;
+                }
+            }
             results.add(new Opportunity(Id=req.oppty, RecordTypeId = rt));
         }
 

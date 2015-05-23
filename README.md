@@ -27,4 +27,4 @@ TODO:
 * Docs
 * Batch process (and maybe scheduled job) to rollup any pledges
 * Better writeoff handling -- the standard Amount field on the Pledge should be Pledged Amount less any writeoff. This means we need to add a Pledged_Amount__c field, a trigger to update Amount, rework the formula for Amount_Due__c, and the formula for Pledge_Amount__c on Payments, and of course the rollups!
-* A writeoff report, and new stages. 
+* A writeoff report, and new stages (Paid in Full, Partially Written Off, Partially Paid, Lost). 

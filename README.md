@@ -16,8 +16,11 @@ What this project consists of:
 * Rollups between `Pledges` and `PledgePayments`
 * Useful reporting structure
 
+What you should do to use it:
+* Assure that your PledgePayment recordtype is NOT included in any rollups. Check in Organizational Settings as well as actual rollup definitions on Account.
+* Know that Pledge donations SHOULD be rolled up in all cases. Pledges will be considered closed/won, because we want to accrue them.
 
 TODO:
 * Reports
 * Docs
-* Error Handling
+* Decide what forecast closed/won stage to put pledges in, so that MajorGift business process is still useful.

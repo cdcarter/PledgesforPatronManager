@@ -141,18 +141,6 @@
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>Pledge_Amount__c</fullName>
-        <externalId>false</externalId>
-        <formula>Pledge__r.Amount</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Pledge Amount</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>2</scale>
-        <trackTrending>false</trackTrending>
-        <type>Currency</type>
-    </fields>
-    <fields>
         <fullName>Pledge_Payment_Alert__c</fullName>
         <externalId>false</externalId>
         <formula>IF(OR(ISNULL( Amount ),(Amount == 0)),

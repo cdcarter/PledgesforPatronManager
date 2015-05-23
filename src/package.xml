@@ -26,7 +26,7 @@
         <members>Opportunity.Expected_Payment__c</members>
         <members>Opportunity.Number_of_Payments__c</members>
         <members>Opportunity.Patron_Comment__c</members>
-        <members>Opportunity.Pledge_Amount__c</members>
+        <members>Opportunity.Lookup_Pledge_Amount__c</members>
         <members>Opportunity.Pledge_Payment_Alert__c</members>
         <members>Opportunity.Pledge_Record_Type_Override__c</members>
         <members>Opportunity.Pledge__c</members>

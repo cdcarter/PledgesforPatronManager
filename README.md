@@ -24,7 +24,8 @@ What you should do to use it:
 * Know that there is a Process you can activate that will take Opportunities with pledge__c set and turn them into PledgePayments. There's an override checkbox too, only visible to Admins.
 
 TODO:
-* Reports
-  * All open pledges with status as of a given date.
-  * Donations including pledged amts but not payments as of a given date.
 * Docs
+* Batch process (and maybe scheduled job) to rollup any pledges
+* Bulkize the Invocable Method
+* test the Invocable method
+* Better writeoff handling -- maybe a closed/lost oppty and a writeoff action?

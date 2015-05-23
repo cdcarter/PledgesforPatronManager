@@ -44,5 +44,43 @@ private class UTIL_SharedCode_TEST {
 			System.assertEquals(pledge.PatronDonate__Fund__c,oppty.PatronDonate__Fund__c);
 		}
 	}
+
+	@isTest static void test_set_record_type() {
+		Opportunity pledge = new Opportunity(RecordTypeId=UTIL_SharedCode.PledgeRecordTypeId(),
+											Name='The Test Pledge',StageName='Pledged',
+											CloseDate=Date.today(),Amount=500);
+		insert pledge;
+
+		UTIL_SharedCode.SetRecordTypeRequest req = new UTIL_SharedCode.SetRecordTypeRequest();
+		req.oppty = pledge.Id;
+		req.recordTypeName = 'MajorGift';
+		UTIL_SharedCode.SetOpportunityRecordType(new List<UTIL_SharedCode.SetRecordTypeRequest>{req});
+		pledge = [Select Id, RecordTypeId FROM Opportunity WHERE Id =: pledge.id];
+		Id rtid = [Select Id From RecordType Where DeveloperName = 'MajorGift'].Id;
+		System.assertEquals(rtid,pledge.RecordTypeId);
+
+	}
 	
+	@isTest static void bulk_test_set_record_type()  {
+		List<Opportunity> opptys = new List<Opportunity>();
+		Id pledgeRT = UTIL_SharedCode.PledgeRecordTypeId();
+		for(integer i = 0;i<2000;i++) {
+			Opportunity pledge = new Opportunity(RecordTypeId = pledgeRT,
+											Name='The Test Pledge' + i,StageName='Pledged',
+											CloseDate=Date.today(),Amount=500);
+			opptys.add(pledge);
+		}
+		insert opptys;
+		List<UTIL_SharedCode.SetRecordTypeRequest> requests = new List<UTIL_SharedCode.SetRecordTypeRequest>();
+		for(Opportunity opp: opptys) {
+			UTIL_SharedCode.SetRecordTypeRequest req = new UTIL_SharedCode.SetRecordTypeRequest();
+			req.oppty = opp.Id;
+			req.recordTypeName = 'MajorGift';
+			requests.add(req);
+		}
+		UTIL_SharedCode.SetOpportunityRecordType(requests);
+		Opportunity pledge = [Select Id, RecordTypeId FROM Opportunity WHERE Id =: opptys[200].id];
+		Id rtid = [Select Id From RecordType Where DeveloperName = 'MajorGift'].Id;
+		System.assertEquals(rtid,pledge.RecordTypeId);
+	}
 }

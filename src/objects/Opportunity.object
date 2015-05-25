@@ -12,7 +12,19 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Paid in Full</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partially Written Off</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Pledged</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renegged</fullName>
             <default>false</default>
         </values>
     </businessProcesses>
@@ -460,6 +472,33 @@ NULL)</formula>
                 <default>false</default>
                 <forecastCategory>Omitted</forecastCategory>
                 <probability>50</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partially Written Off</fullName>
+                <closed>true</closed>
+                <default>false</default>
+                <description>part of the pledges value has been lost</description>
+                <forecastCategory>Closed</forecastCategory>
+                <probability>100</probability>
+                <won>true</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Paid in Full</fullName>
+                <closed>true</closed>
+                <default>false</default>
+                <description>a pledge has been completely paid</description>
+                <forecastCategory>Closed</forecastCategory>
+                <probability>100</probability>
+                <won>true</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Renegged</fullName>
+                <closed>true</closed>
+                <default>false</default>
+                <description>a pledge has been written off in its entirety or lost</description>
+                <forecastCategory>Omitted</forecastCategory>
+                <probability>0</probability>
                 <won>false</won>
             </picklistValues>
             <sorted>false</sorted>

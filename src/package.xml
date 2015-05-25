@@ -47,10 +47,6 @@
         <name>Layout</name>
     </types>
     <types>
-        <members>*</members>
-        <name>Profile</name>
-    </types>
-    <types>
         <members>Opportunity.PatronDonate__PledgePayment</members>
         <members>Opportunity.Pledge</members>
         <name>RecordType</name>

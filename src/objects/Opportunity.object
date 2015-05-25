@@ -81,7 +81,7 @@
     <fields>
         <fullName>Amount_Due__c</fullName>
         <externalId>false</externalId>
-        <formula>Pledged_Amount__c - (Amount_Paid__c + Amount_Written_Off__c)</formula>
+        <formula>Amount - (Amount_Paid__c + Amount_Written_Off__c)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <inlineHelpText>The amount to be collected on the pledge.</inlineHelpText>
         <label>Amount Due</label>
